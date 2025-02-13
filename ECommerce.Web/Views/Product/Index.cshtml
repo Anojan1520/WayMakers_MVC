@@ -1,0 +1,36 @@
+﻿@model List<Product>
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col bgImageCourse">
+            <h1 class="fw-normal mt-4 text-center mt-5">Our Courses</h1>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    
+    <div class="row">
+        @foreach (var data in Model)
+        {
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm m-0 p-0">
+                    <div class="card-header bg-dark text-white ">
+                        @data.Name
+                    </div>
+                    <div class="card-body p-0 m-0">
+                        <div>
+                            <img src="~/Images/best-courses-in-the-United-Kingdom.jpg" alt="Alternate Text" class="img-fluid" />
+                        </div>
+                       <div class="p-2">
+                            <p class="card-text ">Rs.@data.Price.00</p>
+                            <p class="card-text">@data.Description</p>
+                       </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-outline-primary btn-block text-dark">BUY NOW</a>
+    
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
