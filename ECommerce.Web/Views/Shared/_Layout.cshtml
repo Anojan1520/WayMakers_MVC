@@ -7,33 +7,67 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ECommerce.Web.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Way makers</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Payment</a>
-                        </li>
-                    </ul>
+        <div class="top-bar bg-dark text-white py-2">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="contact-info">
+                    <span class="me-4">
+                        <i class="bi bi-telephone me-1 text-danger"></i> +94 762639379
+                    </span>
+                    <span>
+                        <i class="bi bi-envelope me-1 text-danger"></i>
+                        <a href="mailto:noreplay.way.maker@gmail.com?cc=ccuser@example.com&bcc=bccuser@example.com&subject=Support Request&body=Hi, I need assistance with..." style="text-decoration: none; color: white;">
+                            info.way.makers&#64;gmail.com
+                        </a>
+                    </span>
                 </div>
+
+                <div class="social-links">
+                        <i class="bi bi-facebook me-1"></i>
+                    <i class="bi bi-twitter me-1"></i>
+                    <i class="bi bi-google me-1"></i>
+                    <i class="bi bi-linkedin me-1"></i>
+                    <i class="bi bi-instagram me-1"></i>
+                    <a class="btn btn-sm btn-outline-danger text-white ms-2" >Login</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom shadow-lg">
+            <div class="container d-flex justify-content-between align-items-center">
+               <div>
+                   <img src="~/Images/logo.png" alt="Alternate Text" height="40px;"/>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Way makers</a>
+               </div>
+               <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div>
         <main role="main" class="">
             @RenderBody()
         </main>
