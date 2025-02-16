@@ -1,13 +1,13 @@
-﻿    @section Styles {
+﻿@section Styles {
     <link rel="stylesheet" href="~/css/CreateCourse.css" asp-append-version="true" />
 
-    }
+}
     @model Product
 <div class="container">
     <div class=" text-center mt-5 d-flex justify-content-between ">
 
-        <h1>Create Course</h1>
-        <a asp-controller="Admin" asp-action="index">Back To the Admin Page</a>
+        <h1>Edit Course</h1>
+        <a asp-controller="Admin" asp-action="index" >Back To the Admin Page</a>
     </div>
 
 
@@ -17,6 +17,7 @@
                 <div class="card-body bg-light">
 
                     <div class="container">
+                   
                         <form method="post" enctype="multipart/form-data">
                             <div class="controls" style="height:400px;">
 
@@ -38,7 +39,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label asp-for="@Model.Image">Image *</label>
-                                            <input asp-for="@Model.Image" type="file"  class="form-control" placeholder="Please enter your image *" required="required" data-error="Valid email is required.">
+                                            <input asp-for="@Model.Image" type="file" class="form-control" placeholder="Please enter your image *"  data-error="Valid File is required.">
 
                                         </div>
                                     </div>
@@ -47,24 +48,26 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label asp-for="@Model.Description">Message *</label>
-                                            <textarea asp-for="@Model.Description"  class="form-control" placeholder="Write your course description here." rows="4" required="required" data-error="Please, Write Course Description"></textarea>
+                                            <textarea asp-for="@Model.Description" class="form-control" placeholder="Write your course description here." rows="4" required="required" data-error="Please, Write Course Description"></textarea>
                                         </div>
                                     </div>
 
 
                                     <div class="col-md-12 mt-3">
-                                        <input type="submit" class="btn btn-success btn w-100  pt-2 btn-block" value="Create Course">
+                                        <input type="submit" class="btn btn-success btn w-100  pt-2 btn-block" value="Edit Course">
                                     </div>
 
                                 </div>
                             </div>
                         </form>
-                </div>
+                        <img src="@Model.Image"
+                             class="card-img-top" />
+                    </div>
 
+
+                </div>
 
             </div>
 
         </div>
-
     </div>
-</div>

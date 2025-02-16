@@ -14,11 +14,10 @@
         {
             <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 shadow-sm m-0 p-0">
-                    <div class="card-header bg-dark text-white">
-                    </div>
+                   
                     <div class="card-body p-0 m-0">
-                        <div>
-                            <img src="~/Images/best-courses-in-the-United-Kingdom.jpg" alt="Alternate Text" class="img-fluid" />
+                        <div style="max-height:200px;min-height:200px;width:100%;overflow:hidden;">
+                            <img src="@data.Image" alt="Alternate Text" class="img-fluid" style="object-fit:fill;" />
                         </div>
                        <div class="p-2">
                             <p class="card-text ">@data.Name</p>
@@ -27,8 +26,8 @@
                        </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-outline-primary btn-block text-primary">BUY NOW</a>
-                        <a class="btn btn-outline-dark btn-block ">VIEW DETAILS</a>
+                        <button class="btn btn-primary btn-block" disabled>BUY NOW</button>
+                        <a class="btn btn-outline-dark btn-block " asp-controller="Admin" asp-action="getProductId" asp-route-CourseId="@data.Id">VIEW DETAILS</a>
                     </div>
                     <div class="card-footer">
                        
