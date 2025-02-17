@@ -30,11 +30,11 @@
                                 <td>@Course.Description</td>
                                 <td>Rs.@Course.Price</td>
                                 <td><img src="@Course.Image" alt="Product" class="img-fluid" width="50"></td>
-                                <td>
-                                    <a class="btn btn-info btn-sm" asp-controller="Admin" asp-action="getProductId" asp-route-CourseId="@Course.Id">View</a>
+                                <td style="width:130px;">
+                                    <a class="btn btn-info btn-sm" asp-controller="Admin" asp-action="getProductId" asp-route-CourseId="@Course.Id"><i class="bi bi-eye"></i></a>
 
-                                    <a class="btn btn-warning btn-sm" asp-controller="Admin" asp-action="EditProduct" asp-route-id="@Course.Id">✏️ Edit</a>
-                                    <a class="btn btn-danger btn-sm" asp-controller="Admin" asp-action="DeleteCourse" asp-route-id="@Course.Id">❌ Delete</a>
+                                    <a class="btn btn-warning btn-sm" asp-controller="Admin" asp-action="EditProduct" asp-route-id="@Course.Id"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="btn btn-danger btn-sm" asp-controller="Admin" asp-action="DeleteCourse" asp-route-id="@Course.Id"><i class="bi bi-x-square"></i></a>
                                 </td>
                             </tr>
                         }
